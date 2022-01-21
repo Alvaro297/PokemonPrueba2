@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-image: url(https://i.pinimg.com/originals/47/b9/14/47b91495e80426f8b2d419a23c80da59.png); -fx-background-repeat: no-repeat;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo6.HelloController3">
+    <children>
+        <ImageView fx:id="PokemonAliado" fitHeight="150.0" fitWidth="200.0" layoutX="57.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="https://images.wikidexcdn.net/mwuploads/wikidex/d/d8/latest/20150321170743/Darkrai_espalda_G6.gif" />
+        </ImageView>
+        <ImageView fx:id="PokemonEnemigo" fitHeight="150.0" fitWidth="200.0" layoutX="367.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="https://images.wikidexcdn.net/mwuploads/wikidex/f/f6/latest/20140111191253/Reshiram_XY.gif" />
+            </image></ImageView>
+        <VBox layoutX="278.0" layoutY="243.0" prefHeight="79.0" prefWidth="278.0">
+            <children>
+                <HBox prefHeight="32.0" prefWidth="278.0" style="-fx-background-color: white; -fx-background-radius: 18 18 0 0;">
+                    <children>
+                        <Label fx:id="NombreAliado" prefHeight="33.0" prefWidth="142.0" text="Label">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin></Label>
+                        <ImageView fx:id="SexoAliado" fitHeight="29.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="LevelAliado" prefHeight="32.0" prefWidth="86.0" text="Label" />
+                    </children></HBox>
+                <HBox alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="278.0" style="-fx-background-color: white;">
+                    <children>
+                        <ImageView fitHeight="12.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/Imagenes Robadas/Vivo.PNG" />
+                            </image>
+                        </ImageView>
+                        <ProgressBar fx:id="BarraVidaAliada" prefHeight="13.0" prefWidth="219.0" progress="1.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="16.0" prefWidth="278.0" style="-fx-background-color: white; -fx-background-radius: 0 0 18 18;">
+                    <children>
+                        <Label fx:id="VidaAliada" text="234/234">
+                            <font>
+                                <Font name="Consolas" size="13.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets right="25.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox layoutX="89.0" layoutY="54.0" prefHeight="79.0" prefWidth="278.0">
+            <children>
+                <HBox prefHeight="32.0" prefWidth="278.0" style="-fx-background-color: white; -fx-background-radius: 18 18 0 0;">
+                    <children>
+                        <Label fx:id="NombreEnemigo" prefHeight="33.0" prefWidth="142.0" text="Reshiram">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin></Label>
+                        <ImageView fx:id="SexoEnemigo" fitHeight="29.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="LevelEnemigo" prefHeight="32.0" prefWidth="86.0" text="lvl84" />
+                    </children></HBox>
+                <HBox alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="278.0" style="-fx-background-color: white;">
+                    <children>
+                        <ImageView fitHeight="12.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/Imagenes Robadas/Vivo.PNG" />
+                            </image>
+                        </ImageView>
+                        <ProgressBar fx:id="BarraVidaEnemigo" prefHeight="13.0" prefWidth="219.0" progress="1.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="16.0" prefWidth="278.0" style="-fx-background-color: white; -fx-background-radius: 0 0 18 18;">
+                    <children>
+                        <Label fx:id="VidaEnemigo" text="155/296">
+                            <font>
+                                <Font name="Consolas" size="13.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets right="25.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+        <ImageView id="Pokemon5" fx:id="Pokemon6" fitHeight="79.0" fitWidth="219.0" layoutX="299.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <image>
+                <Image url="@/Imagenes Robadas/Fiht.PNG" />
+            </image>
+        </ImageView>
+        <Button fx:id="IrPokemon" layoutX="326.0" layoutY="371.0" mnemonicParsing="false" onMouseClicked="#EnseñarMovimientos" opacity="0.0" prefHeight="29.0" prefWidth="82.0" text="Button" />
+        <ImageView fx:id="Movimientos" fitHeight="124.0" fitWidth="278.0" layoutX="14.0" layoutY="365.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@/Imagenes Robadas/FightAtaques.PNG" />
+            </image>
+        </ImageView>
+      <Button fx:id="MovimientoArriesgado" layoutX="34.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#ataqueArriesgado" opacity="0.0" prefHeight="25.0" prefWidth="111.0" text="Ataque Arriesgado" />
+      <Button fx:id="MovimientoMuyArriesgado" layoutX="152.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#ataqueMuyArriesgado" opacity="0.0" prefHeight="25.0" prefWidth="117.0" text="Ataque muy Arriesgado" />
+      <Button fx:id="MovimientoSeguro" layoutX="37.0" layoutY="409.0" mnemonicParsing="false" onMouseClicked="#ataqueSeguro" opacity="0.0" prefHeight="25.0" prefWidth="104.0" text="Ataque Seguro" />
+      <Button fx:id="Cancelar" layoutX="153.0" layoutY="409.0" mnemonicParsing="false" onMouseClicked="#cancelar" opacity="0.0" prefHeight="25.0" prefWidth="117.0" text="Cancelar" />
+      <Button fx:id="Mochila" layoutX="422.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#recovery" opacity="0.0" prefHeight="25.0" prefWidth="76.0" text="Button" />
+      <Button fx:id="IrPrimeraPantalla" layoutX="312.0" layoutY="416.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="90.0" text="Button" />
+    </children>
+</AnchorPane>

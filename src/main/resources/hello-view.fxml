@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane style="-fx-background-color: #FF00FF;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo6.HelloController">
+    <GridPane layoutX="-1.0" layoutY="26.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="600.0" style="-fx-background-color: #BA55D3;">
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="100.0" prefWidth="177.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.0" minWidth="100.0" prefWidth="206.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.0" minWidth="165.0" prefWidth="217.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
+            <AnchorPane prefHeight="123.0" prefWidth="158.0" GridPane.columnIndex="1">
+                <children>
+                    <HBox prefHeight="23.0" prefWidth="167.0">
+                        <children>
+                     <Label fx:id="Nombre1" prefHeight="23.0" prefWidth="122.0" style="-fx-text-fill: white;" text="Darkrai" textFill="WHITE" />
+                     <Label fx:id="Level1" prefHeight="24.0" prefWidth="43.0" text="Lvl79" textFill="WHITE" />
+                        </children>
+                    </HBox>
+                    <BorderPane fx:id="BorderPokemon1" layoutX="35.0" layoutY="23.0" prefHeight="92.0" prefWidth="108.0" style="-fx-background-color: #8A1D87; -fx-border-color: #000000;">
+                        <center>
+                            <ImageView fx:id="Pokemon1" fitHeight="68.0" fitWidth="88.0" onMouseClicked="#clickPokemon1" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <image>
+                                    <Image url="@/Imagenes Robadas/Darkrai.png" />
+                                </image>
+                            </ImageView>
+                        </center>
+                    </BorderPane>
+                    <VBox layoutX="11.0" layoutY="122.0" prefHeight="38.0" prefWidth="155.0">
+                        <children>
+                            <HBox prefHeight="12.0" prefWidth="188.0">
+                                <children>
+                                    <ImageView fitHeight="13.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/Imagenes Robadas/Vivo.PNG" />
+                                        </image>
+                                    </ImageView>
+                                    <ProgressBar fx:id="BarraVida1" prefHeight="13.0" prefWidth="132.0" progress="1.0" style="-fx-accent: Green;" />
+                                </children>
+                            </HBox>
+                            <HBox prefHeight="100.0" prefWidth="200.0">
+                                <children>
+                           <Label fx:id="VidaMaxima1" prefHeight="25.0" prefWidth="133.0" text="Label" textFill="WHITE" />
+                                    <ImageView fx:id="EstaVivo1" fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/Imagenes Robadas/Vivo.PNG" />
+                                        </image>
+                                    </ImageView>
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+                </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="160.0" prefWidth="207.0" GridPane.columnIndex="2">
+                <children>
+               <HBox layoutX="18.0" layoutY="2.0" prefHeight="25.0" prefWidth="177.0">
+                  <children>
+                     <Label fx:id="Nombre2" prefHeight="23.0" prefWidth="133.0" text="Label" textFill="#fffefe" />
+                     <Label fx:id="Level2" prefHeight="24.0" prefWidth="44.0" text="Label" textFill="WHITE" />
+                  </children>
+               </HBox>
+                    <BorderPane id="BorderPokemon2" fx:id="BorderPokemon2" layoutX="44.0" layoutY="21.0" prefHeight="100.0" prefWidth="126.0" style="-fx-background-color: #8A1D87; -fx-border-color: #000000;">
+                        <center>
+                            <ImageView id="Pokemon2" fx:id="Pokemon2" fitHeight="68.0" fitWidth="84.0" onMouseClicked="#clickPokemon2" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <image>
+                                    <Image url="@/Imagenes Robadas/Deoxys.gif" />
+                                </image>
+                            </ImageView>
+                        </center>
+                        <left>
+                            <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <BorderPane.margin>
+                                    <Insets top="70.0" />
+                                </BorderPane.margin>
+                            </ImageView>
+                        </left>
+                        <right>
+                            <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <BorderPane.margin>
+                                    <Insets top="70.0" />
+                                </BorderPane.margin></ImageView>
+                        </right>
+                    </BorderPane>
+                    <VBox layoutX="29.0" layoutY="127.0" prefHeight="38.0" prefWidth="155.0">
+                        <children>
+                            <HBox prefHeight="12.0" prefWidth="188.0">
+                                <children>
+                                    <ImageView fitHeight="13.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/Imagenes Robadas/Vivo.PNG" />
+                                        </image>
+                                    </ImageView>
+                                    <ProgressBar fx:id="BarraVida2" prefHeight="13.0" prefWidth="132.0" progress="1.0" style="-fx-accent: Green;" />
+                                </children>
+                            </HBox>
+                            <HBox prefHeight="100.0" prefWidth="200.0">
+                                <children>
+                           <Label fx:id="VidaMaxima2" prefHeight="27.0" prefWidth="135.0" text="Label" textFill="#fff9f9" />
+                                    <ImageView id="EstaVivo2" fx:id="EstaVivo2" fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../resources/Imagenes Robadas/Vivo.PNG" />
+                                        </image>
+                                    </ImageView>
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+                </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="160.0" prefWidth="244.0" GridPane.columnIndex="3">
+                <children>
+                    <HBox layoutX="18.0" layoutY="2.0" prefHeight="25.0" prefWidth="177.0">
+                        <children>
+                            <Label fx:id="Nombre3" prefHeight="23.0" prefWidth="168.0" text="Label" textFill="#fffefe" />
+                            <Label fx:id="Level3" prefHeight="24.0" prefWidth="82.0" text="Label" textFill="WHITE" />
+                        </children>
+                    </HBox>
+                    <BorderPane id="BorderPokemon2" fx:id="BorderPokemon3" layoutX="45.0" layoutY="21.0" prefHeight="84.0" prefWidth="68.0" style="-fx-background-color: #8A1D87; -fx-border-color: #000000;">
+                        <center>
+                            <ImageView id="Pokemon2" fx:id="Pokemon3" fitHeight="68.0" fitWidth="84.0" onMouseClicked="#clickPokemon3" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <image>
+                                    <Image url="@/Imagenes Robadas/Garchomp.png" />
+                                </image>
+                            </ImageView>
+                        </center>
+                        <left>
+                            <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <BorderPane.margin>
+                                    <Insets top="70.0" />
+                                </BorderPane.margin>
+                            </ImageView>
+                        </left>
+                        <right>
+                            <ImageView fx:id="Sexo3" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <BorderPane.margin>
+                                    <Insets top="70.0" />
+                                </BorderPane.margin></ImageView>
+                        </right>
+                    </BorderPane>
+                    <VBox layoutX="29.0" layoutY="122.0" prefHeight="38.0" prefWidth="155.0">
+                        <children>
+                            <HBox prefHeight="12.0" prefWidth="188.0">
+                                <children>
+                                    <ImageView fitHeight="13.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/Imagenes Robadas/Vivo.PNG" />
+                                        </image>
+                                    </ImageView>
+                                    <ProgressBar fx:id="BarraVida3" prefHeight="13.0" prefWidth="132.0" progress="1.0" style="-fx-accent: Green;" />
+                                </children>
+                            </HBox>
+                            <HBox prefHeight="100.0" prefWidth="200.0">
+                                <children>
+                                    <Label fx:id="VidaMaxima3" prefHeight="27.0" prefWidth="135.0" text="Label" textFill="#fff9f9" />
+                                    <ImageView id="EstaVivo2" fx:id="EstaVivo3" fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../resources/Imagenes Robadas/Vivo.PNG" />
+                                        </image>
+                                    </ImageView>
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+                </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                <children>
+                    <HBox layoutX="18.0" layoutY="2.0" prefHeight="25.0" prefWidth="177.0">
+                        <children>
+                            <Label fx:id="Nombre5" prefHeight="23.0" prefWidth="168.0" text="Label" textFill="#fffefe" />
+                            <Label fx:id="Level5" prefHeight="24.0" prefWidth="82.0" text="Label" textFill="WHITE" />
+                        </children>
+                    </HBox>
+                    <BorderPane id="BorderPokemon5" fx:id="BorderPokemon5" layoutX="45.0" layoutY="21.0" prefHeight="84.0" prefWidth="68.0" style="-fx-background-color: #8A1D87; -fx-border-color: #000000;">
+                        <center>
+                            <ImageView id="Pokemon5" fx:id="Pokemon5" fitHeight="68.0" fitWidth="84.0" onMouseClicked="#clickPokemon5" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <image>
+                                    <Image url="@/Imagenes Robadas/Luxray.png" />
+                                </image>
+                            </ImageView>
+                        </center>
+                        <left>
+                            <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <BorderPane.margin>
+                                    <Insets top="70.0" />
+                                </BorderPane.margin>
+                            </ImageView>
+                        </left>
+                        <right>
+                            <ImageView fx:id="Sexo5" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <BorderPane.margin>
+                                    <Insets top="70.0" />
+                                </BorderPane.margin></ImageView>
+                        </right>
+                    </BorderPane>
+                    <VBox layoutX="29.0" layoutY="122.0" prefHeight="38.0" prefWidth="155.0">
+                        <children>
+                            <HBox prefHeight="12.0" prefWidth="188.0">
+                                <children>
+                                    <ImageView fitHeight="13.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/Imagenes Robadas/Vivo.PNG" />
+                                        </image>
+                                    </ImageView>
+                                    <ProgressBar fx:id="BarraVida5" prefHeight="13.0" prefWidth="132.0" progress="1.0" style="-fx-accent: Green;" />
+                                </children>
+                            </HBox>
+                            <HBox prefHeight="100.0" prefWidth="200.0">
+                                <children>
+                                    <Label fx:id="VidaMaxima5" prefHeight="27.0" prefWidth="135.0" text="Label" textFill="#fff9f9" />
+                                    <ImageView id="EstaVivo5" fx:id="EstaVivo5" fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../resources/Imagenes Robadas/Vivo.PNG" />
+                                        </image>
+                                    </ImageView>
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+                </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="87.0" prefWidth="85.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <children>
+                    <HBox layoutX="18.0" layoutY="2.0" prefHeight="25.0" prefWidth="177.0">
+                        <children>
+                            <Label fx:id="Nombre4" prefHeight="23.0" prefWidth="168.0" text="Label" textFill="#fffefe" />
+                            <Label fx:id="Level4" prefHeight="24.0" prefWidth="82.0" text="Label" textFill="WHITE" />
+                        </children>
+                    </HBox>
+                    <BorderPane id="BorderPokemon5" fx:id="BorderPokemon4" layoutX="35.0" layoutY="21.0" prefHeight="84.0" prefWidth="68.0" style="-fx-background-color: #8A1D87; -fx-border-color: #000000;">
+                        <center>
+                            <ImageView id="Pokemon5" fx:id="Pokemon4" fitHeight="68.0" fitWidth="84.0" onMouseClicked="#clickPokemon4" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <image>
+                                    <Image url="@/Imagenes Robadas/Gyarados.png" />
+                                </image>
+                            </ImageView>
+                        </center>
+                        <left>
+                            <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <BorderPane.margin>
+                                    <Insets top="70.0" />
+                                </BorderPane.margin>
+                            </ImageView>
+                        </left>
+                        <right>
+                            <ImageView fx:id="Sexo4" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <BorderPane.margin>
+                                    <Insets top="70.0" />
+                                </BorderPane.margin></ImageView>
+                        </right>
+                    </BorderPane>
+                    <VBox layoutX="29.0" layoutY="122.0" prefHeight="38.0" prefWidth="155.0">
+                        <children>
+                            <HBox prefHeight="12.0" prefWidth="188.0">
+                                <children>
+                                    <ImageView fitHeight="13.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/Imagenes Robadas/Vivo.PNG" />
+                                        </image>
+                                    </ImageView>
+                                    <ProgressBar fx:id="BarraVida4" prefHeight="13.0" prefWidth="132.0" progress="1.0" style="-fx-accent: green;" />
+                                </children>
+                            </HBox>
+                            <HBox prefHeight="100.0" prefWidth="200.0">
+                                <children>
+                                    <Label fx:id="VidaMaxima4" prefHeight="27.0" prefWidth="135.0" text="Label" textFill="#fff9f9" />
+                                    <ImageView id="EstaVivo5" fx:id="EstaVivo4" fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../resources/Imagenes Robadas/Vivo.PNG" />
+                                        </image>
+                                    </ImageView>
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+                </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="87.0" prefWidth="85.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                <children>
+                    <HBox layoutX="18.0" layoutY="2.0" prefHeight="25.0" prefWidth="177.0">
+                        <children>
+                            <Label fx:id="Nombre6" prefHeight="23.0" prefWidth="168.0" text="Label" textFill="#fffefe" />
+                            <Label fx:id="Level6" prefHeight="24.0" prefWidth="82.0" text="Label" textFill="WHITE" />
+                        </children>
+                    </HBox>
+                    <BorderPane id="BorderPokemon5" fx:id="BorderPokemon6" layoutX="45.0" layoutY="21.0" prefHeight="84.0" prefWidth="68.0" style="-fx-background-color: #8A1D87; -fx-border-color: #000000;">
+                        <center>
+                            <ImageView id="Pokemon5" fx:id="Pokemon6" fitHeight="68.0" fitWidth="84.0" onMouseClicked="#clickPokemon6" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <image>
+                                    <Image url="@/Imagenes Robadas/Sylveon.png" />
+                                </image>
+                            </ImageView>
+                        </center>
+                        <left>
+                            <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <BorderPane.margin>
+                                    <Insets top="70.0" />
+                                </BorderPane.margin>
+                            </ImageView>
+                        </left>
+                        <right>
+                            <ImageView fx:id="Sexo6" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                <BorderPane.margin>
+                                    <Insets top="70.0" />
+                                </BorderPane.margin></ImageView>
+                        </right>
+                    </BorderPane>
+                    <VBox layoutX="29.0" layoutY="122.0" prefHeight="38.0" prefWidth="155.0">
+                        <children>
+                            <HBox prefHeight="12.0" prefWidth="188.0">
+                                <children>
+                                    <ImageView fitHeight="13.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@/Imagenes Robadas/Vivo.PNG" />
+                                        </image>
+                                    </ImageView>
+                                    <ProgressBar fx:id="BarraVida6" prefHeight="13.0" prefWidth="132.0" progress="1.0" style="-fx-accent: Green;" />
+                                </children>
+                            </HBox>
+                            <HBox prefHeight="100.0" prefWidth="200.0">
+                                <children>
+                                    <Label fx:id="VidaMaxima6" prefHeight="27.0" prefWidth="135.0" text="Label" textFill="#fff9f9" />
+                                    <ImageView id="EstaVivo6" fx:id="EstaVivo6" fitHeight="23.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../resources/Imagenes Robadas/Vivo.PNG" />
+                                        </image>
+                                    </ImageView>
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+                </children>
+            </AnchorPane>
+        </children>
+    </GridPane>
+   <Button fx:id="Completado" disable="true" layoutX="63.0" layoutY="349.0" mnemonicParsing="false" onMouseClicked="#combate" style="-fx-background-color: #FF00FF;" text="Elegir Pokemon" />
+   <Button fx:id="Salir" layoutX="477.0" layoutY="349.0" mnemonicParsing="false" style="-fx-background-color: #FF00FF;" text="Button" textFill="WHITE" />
+    <padding>
+        <Insets bottom="10.0" top="10.0" />
+    </padding>
+</AnchorPane>
