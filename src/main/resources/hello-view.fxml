@@ -78,17 +78,23 @@
                             </ImageView>
                         </center>
                         <left>
-                            <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                            <ImageView fx:id="Favorito2" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                 <BorderPane.margin>
                                     <Insets top="70.0" />
                                 </BorderPane.margin>
+                        <image>
+                           <Image url="@/Imagenes Robadas/img.png" />
+                        </image>
                             </ImageView>
                         </left>
                         <right>
                             <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                 <BorderPane.margin>
                                     <Insets top="70.0" />
-                                </BorderPane.margin></ImageView>
+                                </BorderPane.margin>
+                        <image>
+                           <Image url="@/Imagenes Robadas/img.png" />
+                        </image></ImageView>
                         </right>
                     </BorderPane>
                     <VBox layoutX="29.0" layoutY="127.0" prefHeight="38.0" prefWidth="155.0">
@@ -134,17 +140,23 @@
                             </ImageView>
                         </center>
                         <left>
-                            <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                            <ImageView fx:id="Favorito3" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                 <BorderPane.margin>
                                     <Insets top="70.0" />
                                 </BorderPane.margin>
+                        <image>
+                           <Image url="@/Imagenes Robadas/img.png" />
+                        </image>
                             </ImageView>
                         </left>
                         <right>
                             <ImageView fx:id="Sexo3" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                 <BorderPane.margin>
                                     <Insets top="70.0" />
-                                </BorderPane.margin></ImageView>
+                                </BorderPane.margin>
+                        <image>
+                           <Image url="@/Imagenes Robadas/img.png" />
+                        </image></ImageView>
                         </right>
                     </BorderPane>
                     <VBox layoutX="29.0" layoutY="122.0" prefHeight="38.0" prefWidth="155.0">
@@ -190,17 +202,23 @@
                             </ImageView>
                         </center>
                         <left>
-                            <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                            <ImageView fx:id="Favorito5" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                 <BorderPane.margin>
                                     <Insets top="70.0" />
                                 </BorderPane.margin>
+                        <image>
+                           <Image url="@/Imagenes Robadas/img.png" />
+                        </image>
                             </ImageView>
                         </left>
                         <right>
                             <ImageView fx:id="Sexo5" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                 <BorderPane.margin>
                                     <Insets top="70.0" />
-                                </BorderPane.margin></ImageView>
+                                </BorderPane.margin>
+                        <image>
+                           <Image url="@/Imagenes Robadas/img.png" />
+                        </image></ImageView>
                         </right>
                     </BorderPane>
                     <VBox layoutX="29.0" layoutY="122.0" prefHeight="38.0" prefWidth="155.0">
@@ -246,17 +264,23 @@
                             </ImageView>
                         </center>
                         <left>
-                            <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                            <ImageView fx:id="Favorito4" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                 <BorderPane.margin>
                                     <Insets top="70.0" />
                                 </BorderPane.margin>
+                        <image>
+                           <Image url="@/Imagenes Robadas/img.png" />
+                        </image>
                             </ImageView>
                         </left>
                         <right>
                             <ImageView fx:id="Sexo4" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                 <BorderPane.margin>
                                     <Insets top="70.0" />
-                                </BorderPane.margin></ImageView>
+                                </BorderPane.margin>
+                        <image>
+                           <Image url="@/Imagenes Robadas/img.png" />
+                        </image></ImageView>
                         </right>
                     </BorderPane>
                     <VBox layoutX="29.0" layoutY="122.0" prefHeight="38.0" prefWidth="155.0">
@@ -302,17 +326,23 @@
                             </ImageView>
                         </center>
                         <left>
-                            <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                            <ImageView fx:id="Favorito6" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                 <BorderPane.margin>
                                     <Insets top="70.0" />
                                 </BorderPane.margin>
+                        <image>
+                           <Image url="@/Imagenes Robadas/img.png" />
+                        </image>
                             </ImageView>
                         </left>
                         <right>
                             <ImageView fx:id="Sexo6" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                 <BorderPane.margin>
                                     <Insets top="70.0" />
-                                </BorderPane.margin></ImageView>
+                                </BorderPane.margin>
+                        <image>
+                           <Image url="@/Imagenes Robadas/img.png" />
+                        </image></ImageView>
                         </right>
                     </BorderPane>
                     <VBox layoutX="29.0" layoutY="122.0" prefHeight="38.0" prefWidth="155.0">
@@ -344,7 +374,9 @@
         </children>
     </GridPane>
    <Button fx:id="Completado" disable="true" layoutX="63.0" layoutY="349.0" mnemonicParsing="false" onMouseClicked="#combate" style="-fx-background-color: #FF00FF;" text="Elegir Pokemon" />
-   <Button fx:id="Salir" layoutX="477.0" layoutY="349.0" mnemonicParsing="false" style="-fx-background-color: #FF00FF;" text="Button" textFill="WHITE" />
+   <Button fx:id="Graficos" layoutX="477.0" layoutY="349.0" mnemonicParsing="false" onMouseClicked="#graficos" style="-fx-background-color: #FF00FF;" text="Graficos" textFill="WHITE" />
+   <Button layoutX="259.0" layoutY="349.0" mnemonicParsing="false" onMouseClicked="#pokedex" text="Pokedex" />
+   <Button fx:id="objetofin" disable="true" layoutX="365.0" layoutY="349.0" mnemonicParsing="false" onMouseClicked="#usarobjeto" text="Objeto" />
     <padding>
         <Insets bottom="10.0" top="10.0" />
     </padding>

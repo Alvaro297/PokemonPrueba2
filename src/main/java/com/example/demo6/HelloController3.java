@@ -1,21 +1,22 @@
 package com.example.demo6;
 
-import javafx.event.ActionEvent;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.Optional;
 import java.util.Random;
 
 public class HelloController3 {
+
     @FXML
     ImageView PokemonAliado;
     @FXML
@@ -26,6 +27,9 @@ public class HelloController3 {
     Label VidaAliada;
     @FXML
     ProgressBar BarraVidaAliada;
+    @FXML
+    Button Continuar;
+
 
     @FXML
     ProgressBar BarraVidaEnemigo;
@@ -50,28 +54,23 @@ public class HelloController3 {
     @FXML
     Button Cancelar;
     @FXML
+    Button Bolsa;
+    @FXML
     Button IrPrimeraPantalla;
     @FXML
     ImageView Movimientos;
     @FXML
     ImageView Pokemon6;
-    @FXML
-    AnchorPane Alerta;
-    @FXML
-    ImageView ImagenMuerto;
-    @FXML
-    Button Salir;
-    @FXML
-    Button Continuar;
-    @FXML
-    Label MensajeAlerta;
     private Pokemon pokemon2;
     private HelloController HelloController;
-    private HelloController3 stage;
+    private Bolsa bolsa;
+    Random claseRandom = new Random();
+    int danoAletorioEnemigo;
+    int danoAletorioAliado;
 
 
     @FXML
-    public void ponerPokemon(Pokemon pokemon) throws IOException {
+    public void ponerPokemon(Pokemon pokemon) throws MalformedURLException {
         if (pokemon.getHp()<=0){
             Alerta(pokemon);
         }
@@ -80,8 +79,8 @@ public class HelloController3 {
             float Vida1 = hola / pokemon.getHpMax();
             NombreAliado.setText(pokemon.getNombre());
             LevelAliado.setText("Lvl" + pokemon.getLevel());
-            VidaAliada.setText((pokemon.getHp() + "/" + (pokemon.getHpMax())));
-            PokemonAliado.setImage(pokemon.getImagenDetras());
+            VidaAliada.setText("Ps");
+            PokemonAliado.setImage(new Image(pokemon.getImagenDetras().toURI().toString()));
             BarraVidaAliada.setProgress(Vida1);
             if (Vida1 < 0.25) {
                 BarraVidaAliada.setStyle("-fx-accent: red;");
@@ -94,7 +93,7 @@ public class HelloController3 {
             NombreEnemigo.setText(HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getNombre());
             LevelEnemigo.setText("Lvl" + HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getLevel());
             VidaEnemigo.setText((HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getHpRival() + "/" + (HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getHpMax())));
-            PokemonEnemigo.setImage(HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getImagen());
+            PokemonEnemigo.setImage(new Image(HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getImagen().toURI().toString()));
             BarraVidaEnemigo.setProgress(Vida2);
             if (Vida2 < 0.25) {
                 BarraVidaEnemigo.setStyle("-fx-accent: red;");
@@ -106,7 +105,7 @@ public class HelloController3 {
 
     }
     @FXML
-    public void EnseñarMovimientos(){
+    public void ensenarMovimientos(){
         Pokemon6.setDisable(true);
         Pokemon6.setOpacity(0);
         IrPrimeraPantalla.setDisable(true);
@@ -118,14 +117,19 @@ public class HelloController3 {
         Cancelar.setOpacity(1);
     }
     public void ataqueArriesgado() throws IOException {
-        HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).setHpRival(HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getHpRival()-80);
+        danoAletorioEnemigo =claseRandom.nextInt(15)+10;
+        HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).setHpRival(HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getHpRival()- danoAletorioEnemigo);
+        HelloController.dmgEnemigo+= danoAletorioEnemigo;
         if ( HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getHpRival()<=0) {
             Alerta(HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x));
             control();
         }else{
-            pokemon2.setHp(pokemon2.getHp()-80);
+            danoAletorioAliado =claseRandom.nextInt(15)+10;
+            HelloController.dmgAliado+= danoAletorioAliado;
+            pokemon2.setHp(pokemon2.getHp()- danoAletorioAliado);
         }
         ponerPokemon(pokemon2);
+
         this.HelloController.actualizarVidas();
     }
 
@@ -142,7 +146,7 @@ public class HelloController3 {
         alert.setHeaderText(null);
         alert.setTitle("Salir o no");
         alert.setContentText("El pokemon "+pokemon.getNombre()+" ha muerto");
-        alert.setGraphic(new ImageView(pokemon.getImagen()));
+        alert.setGraphic(new ImageView(new Image(pokemon.getImagen().toURI().toString())));
         Optional<ButtonType> action = alert.showAndWait();
         if (action.get() == ButtonType.OK) {
             continuarAhora();
@@ -154,9 +158,11 @@ public class HelloController3 {
         System.exit(0);
     }
     public void continuarAhora(){
-        Stage stage = (Stage) this.Continuar.getScene().getWindow();
-        stage.close();
         com.example.demo6.HelloController.stage =null;
+        Stage stage = (Stage) this.Pokemon6.getScene().getWindow();
+        stage.close();
+
+
     }
 
     public void setSeleccionPokemonController(HelloController helloControler){
@@ -164,27 +170,36 @@ public class HelloController3 {
     }
 
     public void ataqueMuyArriesgado() throws IOException {
-        HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).setHpRival(HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getHpRival()-100);
+        danoAletorioEnemigo =claseRandom.nextInt(50);
+        HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).setHpRival(HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getHpRival()- danoAletorioEnemigo);
+        HelloController.dmgEnemigo+= danoAletorioEnemigo;
         if ( HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getHpRival()<=0) {
             Alerta(HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x));
             control();
         }else{
-            pokemon2.setHp(pokemon2.getHp()-100);
+            danoAletorioAliado =claseRandom.nextInt(50);
+            HelloController.dmgAliado+= danoAletorioAliado;
+            pokemon2.setHp(pokemon2.getHp()- danoAletorioAliado);
         }
         ponerPokemon(pokemon2);
+
         this.HelloController.actualizarVidas();
 
     }
 
     public void ataqueSeguro() throws IOException {
         HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).setHpRival(HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getHpRival()-20);
+        HelloController.dmgEnemigo+=20;
         if ( HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getHpRival()<=0) {
             Alerta(HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x));
             control();
         }else{
             pokemon2.setHp(pokemon2.getHp()-20);
+            HelloController.dmgAliado+=20;
         }
         ponerPokemon(pokemon2);
+
+
         this.HelloController.actualizarVidas();
 
     }
@@ -202,13 +217,41 @@ public class HelloController3 {
     }
 
     public void recovery() throws IOException {
-        HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).setHpRival(HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getHpRival()+20);
+        HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).setHpRival(HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getHpRival()+(claseRandom.nextInt(50)+25));
         if ( HelloApplication.PokemonArrayEnemigo.get(HelloApplication.x).getHpRival()<=0) {
             control();
         }else{
-            pokemon2.setHp(pokemon2.getHp()+20);
+            pokemon2.setHp(pokemon2.getHp()+(claseRandom.nextInt(50)+25));
         }
         ponerPokemon(pokemon2);
         this.HelloController.actualizarVidas();
+    }
+
+    public void objetos() throws IOException {
+        Stage stage = new Stage();
+        stage.setResizable(false);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Bolsa.fxml"));
+        Scene scene = new Scene(loader.load(), 600, 500);
+        stage.setScene(scene);
+        stage.show();
+
+        Bolsa v = loader.getController();
+
+        v.empezar();
+    }
+    @FXML
+    public void cambiarPs(){
+        VidaAliada.setText((pokemon2.getHp() + "/" + (pokemon2.getHpMax())));
+    }
+    @FXML
+    public void resetPs(){
+        VidaAliada.setText("Ps");
+    }
+
+
+    public void setSeleccionPokemonControllerObjeto(Bolsa bolsa) {
+    }
+
+    public void capturar(Objeto objetofinal) {
     }
 }

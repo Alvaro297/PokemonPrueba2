@@ -28,25 +28,18 @@
                     </children></HBox>
                 <HBox alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="278.0" style="-fx-background-color: white;">
                     <children>
-                        <ImageView fitHeight="12.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../resources/Imagenes Robadas/Vivo.PNG" />
-                            </image>
-                        </ImageView>
-                        <ProgressBar fx:id="BarraVidaAliada" prefHeight="13.0" prefWidth="219.0" progress="1.0" />
-                    </children>
-                </HBox>
-                <HBox alignment="CENTER_RIGHT" prefHeight="16.0" prefWidth="278.0" style="-fx-background-color: white; -fx-background-radius: 0 0 18 18;">
-                    <children>
-                        <Label fx:id="VidaAliada" text="234/234">
+                        <Label fx:id="VidaAliada" onMouseEntered="#cambiarPs" onMouseExited="#resetPs" prefHeight="17.0" prefWidth="93.0" text="234/234">
                             <font>
                                 <Font name="Consolas" size="13.0" />
                             </font>
                             <HBox.margin>
-                                <Insets right="25.0" />
+                                <Insets left="10.0" />
                             </HBox.margin>
                         </Label>
+                        <ProgressBar fx:id="BarraVidaAliada" prefHeight="13.0" prefWidth="232.0" progress="1.0" />
                     </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="16.0" prefWidth="278.0" style="-fx-background-color: white; -fx-background-radius: 0 0 18 18;">
                     <VBox.margin>
                         <Insets />
                     </VBox.margin>
@@ -96,7 +89,7 @@
                 <Image url="@/Imagenes Robadas/Fiht.PNG" />
             </image>
         </ImageView>
-        <Button fx:id="IrPokemon" layoutX="326.0" layoutY="371.0" mnemonicParsing="false" onMouseClicked="#EnseñarMovimientos" opacity="0.0" prefHeight="29.0" prefWidth="82.0" text="Button" />
+        <Button fx:id="IrPokemon" layoutX="326.0" layoutY="371.0" mnemonicParsing="false" onMouseClicked="#ensenarMovimientos" opacity="0.0" prefHeight="29.0" prefWidth="82.0" text="Button" />
         <ImageView fx:id="Movimientos" fitHeight="124.0" fitWidth="278.0" layoutX="14.0" layoutY="365.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@/Imagenes Robadas/FightAtaques.PNG" />
@@ -106,7 +99,9 @@
       <Button fx:id="MovimientoMuyArriesgado" layoutX="152.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#ataqueMuyArriesgado" opacity="0.0" prefHeight="25.0" prefWidth="117.0" text="Ataque muy Arriesgado" />
       <Button fx:id="MovimientoSeguro" layoutX="37.0" layoutY="409.0" mnemonicParsing="false" onMouseClicked="#ataqueSeguro" opacity="0.0" prefHeight="25.0" prefWidth="104.0" text="Ataque Seguro" />
       <Button fx:id="Cancelar" layoutX="153.0" layoutY="409.0" mnemonicParsing="false" onMouseClicked="#cancelar" opacity="0.0" prefHeight="25.0" prefWidth="117.0" text="Cancelar" />
-      <Button fx:id="Mochila" layoutX="422.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#recovery" opacity="0.0" prefHeight="25.0" prefWidth="76.0" text="Button" />
+      <Button fx:id="Mochila" layoutX="319.0" layoutY="416.0" mnemonicParsing="false" onMouseClicked="#recovery" opacity="0.0" prefHeight="25.0" prefWidth="76.0" text="Button" />
       <Button fx:id="IrPrimeraPantalla" layoutX="312.0" layoutY="416.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="90.0" text="Button" />
+      <Button fx:id="Continuar" disable="true" layoutX="31.0" layoutY="453.0" mnemonicParsing="false" opacity="0.0" text="Button" />
+      <Button fx:id="Bolsa" layoutX="419.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#objetos" opacity="0.0" prefHeight="25.0" prefWidth="76.0" text="mochila" />
     </children>
 </AnchorPane>

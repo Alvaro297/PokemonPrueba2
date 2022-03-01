@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo6.Bolsa">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <ImageView fx:id="ObjetoFinal" fitHeight="150.0" fitWidth="175.0" layoutX="1.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="Usar" disable="true" layoutX="63.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#Usar" text="Usar" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <VBox prefHeight="398.0" prefWidth="417.0" style="-fx-background-color: #E5BA7A;">
+               <children>
+                  <HBox fx:id="Objeto1" onMouseClicked="#objeto1" prefHeight="51.0" prefWidth="417.0">
+                     <children>
+                        <ImageView fx:id="Imagen1" fitHeight="57.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../java/com/example/demo6/fotos/Poke Ball.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="Nombre1" alignment="CENTER" prefHeight="57.0" prefWidth="362.0" text="Poke Ball" textAlignment="CENTER">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                   <HBox fx:id="Objeto2" onMouseClicked="#objeto2" prefHeight="51.0" prefWidth="417.0">
+                       <children>
+                           <ImageView fx:id="Imagen2" fitHeight="57.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                               <image>
+                                   <Image url="@../java/com/example/demo6/fotos/MasterBall.jpg" />
+                               </image>
+                           </ImageView>
+                           <Label fx:id="Nombre2" alignment="CENTER" prefHeight="57.0" prefWidth="362.0" text="Master Ball" textAlignment="CENTER">
+                               <font>
+                                   <Font size="24.0" />
+                               </font>
+                           </Label>
+                       </children>
+                   </HBox>
+                   <HBox fx:id="Objeto3" onMouseClicked="#objeto3" prefHeight="51.0" prefWidth="417.0">
+                       <children>
+                           <ImageView fx:id="Imagen3" fitHeight="57.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                               <image>
+                                   <Image url="@../java/com/example/demo6/fotos/Max Revivir.jpg" />
+                               </image>
+                           </ImageView>
+                           <Label fx:id="Nombre3" alignment="CENTER" prefHeight="57.0" prefWidth="362.0" text="Max Revivir" textAlignment="CENTER">
+                               <font>
+                                   <Font size="24.0" />
+                               </font>
+                           </Label>
+                       </children>
+                   </HBox>
+                   <HBox fx:id="Objeto4" onMouseClicked="#objeto4" prefHeight="51.0" prefWidth="417.0">
+                       <children>
+                           <ImageView fx:id="Imagen4" fitHeight="57.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                               <image>
+                                   <Image url="@../java/com/example/demo6/fotos/Hiperpocion.png" />
+                               </image>
+                           </ImageView>
+                           <Label fx:id="Nombre4" alignment="CENTER" prefHeight="57.0" prefWidth="362.0" text="Hiperpocion" textAlignment="CENTER">
+                               <font>
+                                   <Font size="24.0" />
+                               </font>
+                           </Label>
+                       </children>
+                   </HBox>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

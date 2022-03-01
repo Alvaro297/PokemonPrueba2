@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo6.HelloControllerGraf">
+    <children>
+        <PieChart fx:id="pieChart" prefHeight="308.0" prefWidth="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" />
+        <BarChart fx:id="barChart" layoutX="300.0" prefHeight="326.0" prefWidth="300.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0">
+            <xAxis>
+                <CategoryAxis fx:id="EjeX" side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="EjeY" side="LEFT" />
+            </yAxis>
+        </BarChart>
+    </children>
+</AnchorPane>
+
